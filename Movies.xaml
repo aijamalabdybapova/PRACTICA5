@@ -1,0 +1,36 @@
+﻿<Page x:Class="PRACTICA5.Movies"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PRACTICA5"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Movies">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="Moviesdg" Background="LightSteelBlue" Grid.Row="0" Grid.ColumnSpan="4" SelectionChanged="Moviesdg_SelectionChanged"/>
+        <TextBox x:Name="MoviesboxD"  Grid.Row="1" Grid.Column="0" TextChanged="MoviesboxD_TextChanged" />
+        <TextBox x:Name="TimesboxD"  Grid.Row="1" Grid.Column="1" TextChanged="TimesboxD_TextChanged" />
+        <ComboBox x:Name="DirIDcomboboxD"  Grid.Column="2"  Grid.Row="1" SelectionChanged="DirIDcomboboxD_SelectionChanged" />
+        <ComboBox x:Name="GenIDcomboboxD"  Grid.Row="1" Grid.Column="3" SelectionChanged="GenIDcomboboxD_SelectionChanged"/>
+        <Button x:Name="AddMovDS" Grid.Row="2" Grid.ColumnSpan="4" Background="#FF1604F1" Content="Добавить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="AddMovDS_Click"  />
+        <Button x:Name="UpdateMovDS" Grid.Row="3" Grid.ColumnSpan="4" Background="#FF1604F1" Content="Изменить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="UpdateMovDS_Click"  />
+        <Button x:Name="DelMovDS" Grid.Row="4" Grid.ColumnSpan="4" Background="#FF1604F1" Content="Удалить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="DelMovDS_Click"  />
+
+    </Grid>
+</Page>

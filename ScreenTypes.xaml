@@ -1,0 +1,31 @@
+﻿<Page x:Class="PRACTICA5.ScreenTypes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PRACTICA5"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ScreenTypes">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="Typesdg" Background="LightSteelBlue" Grid.Row="0" Grid.ColumnSpan="2" SelectionChanged="Typesdg_SelectionChanged" />
+        <TextBox x:Name="ScreenTypesboxD"  Grid.Row="1" Grid.Column="0" TextChanged="ScreenTypesboxD_TextChanged" />
+        <TextBox x:Name="CostboxD"  Grid.Row="1" Grid.Column="1" TextChanged="CostboxD_TextChanged"  />
+        <Button x:Name="AddTypeDS" Grid.Row="2" Grid.ColumnSpan="2" Background="#FF1604F1" Content="Добавить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="AddTypeDS_Click"  />
+        <Button x:Name="UpdateTypeDS" Grid.Row="3" Grid.ColumnSpan="2" Background="#FF1604F1" Content="Изменить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="UpdateTypeDS_Click" />
+        <Button x:Name="DelTypeDS" Grid.Row="4" Grid.ColumnSpan="2" Background="#FF1604F1" Content="Удалить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="DelTypeDS_Click"/>
+
+    </Grid>
+</Page>

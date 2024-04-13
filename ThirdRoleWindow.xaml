@@ -1,0 +1,34 @@
+﻿<Window x:Class="PRACTICA5.ThirdRoleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRACTICA5"
+        mc:Ignorable="d"
+        Title="ThirdRoleWindow" Height="450" Width="800">
+    <Grid Background="LightSteelBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="TAБЛИЦЫ" Grid.Row="0" Grid.ColumnSpan="6" FontSize="36" FontWeight="Bold" Foreground="#FF000058" HorizontalAlignment="Center" FontFamily="Sitka Small"/>
+        <Button x:Name="btnMovies" Content="Фильмы" Margin="10" Grid.Row="1" Grid.Column="0" Click="btnMovies_Click" Background="#FF17319A"  FontSize="20" Foreground="White"/>
+        <Button x:Name="btnDirectors" Content="Peжиccepы" Margin="10" Grid.Row="1" Grid.Column="1" Click="btnDirectors_Click" Background="#FF17319A"  FontSize="20" Foreground="White"/>
+        <Button x:Name="btnGenres" Content="Жанры" Margin="10" Grid.Row="1" Grid.Column="2" Click="btnGenres_Click"  Background="#FF17319A" FontSize="20" Foreground="White"/>
+        <Button x:Name="btnScreenTypes" Content="Типы залов" Margin="10" Grid.Row="1" Grid.Column="3"   Background="#FF17319A" FontSize="20" Foreground="White" Click="btnScreenTypes_Click"/>
+        <Button x:Name="btnScreens" Content="Залы" Margin="10" Grid.Row="1" Grid.Column="4"   Background="#FF17319A" FontSize="20" Foreground="White" Click="btnScreens_Click"/>
+        <Button x:Name="btnShowTimes" Content="Сеансы" Margin="10" Grid.Row="1" Grid.Column="5"   Background="#FF17319A" FontSize="20" Foreground="White" Click="btnShowTimes_Click"/>
+        <Frame x:Name="Frame" Grid.Row="2" Grid.ColumnSpan="6"/>
+        <Button x:Name="BACKDS" Content="Вернуться назад" Grid.Column="0" Grid.Row="3" Margin="37,43,67,10" Background="#FF81D85A" Foreground="Black" FontWeight="Bold" FontSize="14" FontFamily="Sitka Text" Click="BACKDS_Click" Grid.ColumnSpan="2" />
+    </Grid>
+</Window>

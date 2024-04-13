@@ -1,0 +1,37 @@
+﻿<Page x:Class="PRACTICA5.Orders"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PRACTICA5"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Orders">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="Ordersdg" Background="LightSteelBlue" Grid.Row="0" Grid.ColumnSpan="5" SelectionChanged="Ordersdg_SelectionChanged"  />
+        <TextBox x:Name="OrderDateboxD"  Grid.Row="1" Grid.Column="0" />
+        <TextBox x:Name="QuantityboxD"  Grid.Row="1" Grid.Column="1" />
+        <TextBox x:Name="TotalCostboxD"  Grid.Row="1" Grid.Column="2" />
+        <TextBox x:Name="PayMentboxD"  Grid.Row="1" Grid.Column="3"/>
+        <ComboBox x:Name="EmpIDcomboboxD"  Grid.Row="1" Grid.Column="4" SelectionChanged="EmpIDcomboboxD_SelectionChanged" />
+        <Button x:Name="AdOrDS" Grid.Row="2" Grid.ColumnSpan="5" Background="#FF1604F1" Content="Добавить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="AdOrDS_Click"   />
+        <Button x:Name="UpdateOrlDS" Grid.Row="3" Grid.ColumnSpan="5" Background="#FF1604F1" Content="Изменить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="UpdateOrlDS_Click"  />
+        <Button x:Name="DelOrlDS" Grid.Row="4" Grid.ColumnSpan="5" Background="#FF1604F1" Content="Удалить" FontSize="17" FontFamily="Cascadia Code SemiBold" Click="DelOrlDS_Click"  />
+
+    </Grid>
+</Page>
